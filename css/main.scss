@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&family=Poppins&display=swap");
+
+$color_1: #1d2027;
+$color_2: #363c49;
+$color_3: #323844;
+$color_4: #a91fb3;
+$color_5: #dc27e9;
+$color_6: rgb(230, 230, 230);
+
+$padding: 4em;
+$font1: "Poppins", sans-serif;
+$font2: "Lora", serif;
+$desktop: 700px;
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  color: $color_6;
+  font-family: $font1;
+  background-color: $color_1;
+  height: 100vh;
+}
+
+header {
+  position: absolute;
+  margin: 1em;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  display: grid;
+  justify-items: center;
+}
+
+main {
+  position: relative;
+  top: 15%;
+  width: 80vw;
+  margin: 0 auto 0 auto;
+
+  .node-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .node {
+    height: 1vw;
+    width: 1vw;
+    background-color: $color_2;
+  }
+
+  .node:hover {
+    border: 0.02vw solid white;
+  }
+
+  .applied {
+    background-color: $color_5;
+  }
+}
+
+footer {
+  position: absolute;
+  width: 100vw;
+  height: 2.5em;
+  margin: 1em;
+  bottom: -10vh;
+  left: 0;
+  display: grid;
+  justify-items: center;
+
+  ul li {
+    list-style: none;
+    display: inline-block;
+  }
+
+  a {
+    color: $color_6;
+    text-decoration: none;
+    margin: 0 5vw 0 0;
+  }
+}
