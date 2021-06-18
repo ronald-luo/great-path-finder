@@ -50,7 +50,22 @@ main .node:hover {
 }
 
 main .applied {
-  background-color: #dc27e9;
+  -webkit-animation-name: applied;
+          animation-name: applied;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes applied {
+  100% {
+    background-color: #dc27e9;
+  }
+}
+
+@keyframes applied {
+  100% {
+    background-color: #dc27e9;
+  }
 }
 
 footer {

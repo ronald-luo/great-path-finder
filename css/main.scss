@@ -63,6 +63,13 @@ main {
   }
 
   .applied {
+    animation-name: applied;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes applied {
+  100% {
     background-color: $color_5;
   }
 }
